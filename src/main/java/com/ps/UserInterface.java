@@ -1,5 +1,6 @@
 package com.ps;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class UserInterface {
@@ -78,7 +79,18 @@ public class UserInterface {
     private void processGetByColorRequest() {}
     private void processGetByMileageRequest() {}
     private void processGetByVehicleTypeRequest() {}
-    private void processAllVehiclesRequest() {}
+    private void processAllVehiclesRequest() {
+        List<Vehicle> vehicles = dealership.getAllVehicles();
+        displayVehicles(vehicles);
+    }
+    // Helper Method for processAllVehiclesRequest() to display ALL vehicles
+    private void displayVehicles(List<Vehicle> vehicles) {
+        for (Vehicle vehicle : vehicles) {
+            System.out.println("VIN: " + vehicle.getVin() + ", Year: " + vehicle.getYear() + ", Make: " + vehicle.getMake() +
+                    ", Model: " + vehicle.getModel() + ", Type: " + vehicle.getVehicleType() + ", Color: " + vehicle.getColor() +
+                    ", Mileage: " + vehicle.getOdometer() + ", Price: $" + vehicle.getPrice());
+        }
+    }
     private void processAddVehicleRequest() {}
     private void processRemoveVehicleRequest() {}
 }

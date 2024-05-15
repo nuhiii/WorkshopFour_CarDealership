@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fb52db98-c8f9-4437-96ca-e7fd8d5c608d" name="Changes" comment="Complete Phase 1 with developing Dealership and Vehicle class">
-      <change afterPath="$PROJECT_DIR$/inventory.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ps/DealershipFileManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="fb52db98-c8f9-4437-96ca-e7fd8d5c608d" name="Changes" comment="Initiate Phase 3 (WIP)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ps/Dealership.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ps/Dealership.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ps/DealershipFileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ps/DealershipFileManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ps/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ps/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ps/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ps/UserInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +62,7 @@
       <workItem from="1715813801948" duration="4000" />
       <workItem from="1715813807287" duration="1000" />
       <workItem from="1715813809814" duration="31000" />
-      <workItem from="1715813843346" duration="394000" />
+      <workItem from="1715813843346" duration="3046000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <option name="closed" value="true" />
@@ -83,7 +80,23 @@
       <option name="project" value="LOCAL" />
       <updated>1715809247252</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Complete Phase 2 by implementing Dealership File Manager class">
+      <option name="closed" value="true" />
+      <created>1715814446239</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1715814446239</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Initiate Phase 3 (WIP)">
+      <option name="closed" value="true" />
+      <created>1715816089676</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1715816089676</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -92,6 +105,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="Complete Phase 1 with developing Dealership and Vehicle class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Complete Phase 1 with developing Dealership and Vehicle class" />
+    <MESSAGE value="Complete Phase 2 by implementing Dealership File Manager class" />
+    <MESSAGE value="Initiate Phase 3 (WIP)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initiate Phase 3 (WIP)" />
   </component>
 </project>

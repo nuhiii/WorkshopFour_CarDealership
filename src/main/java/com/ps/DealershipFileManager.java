@@ -14,19 +14,19 @@ public class DealershipFileManager {
         Dealership dealership = null;
         try {
             BufferedReader buffReader = new BufferedReader(new FileReader(filePath));
-            // Process and consume first line containing dealership info
-            String dealershipInfo = buffReader.readLine();
-            if (dealershipInfo != null) {
-                String[] dealershipData = dealershipInfo.split("\\|");
+            // Process first line containing dealership info
+            String dealershipLine = buffReader.readLine();
+            if (dealershipLine != null) {
+                String[] dealershipData = dealershipLine.split("\\|");
                 String name = dealershipData[0];
                 String address = dealershipData[1];
                 String phone = dealershipData[2];
                 dealership = new Dealership(name, address, phone);
 
                 // Interpret rest of lines with the vehicle data
-                String line;
-                while ((line = buffReader.readLine()) != null) {
-                    String[] vehicleData = line.split("\\|");
+                String vehicleLine;
+                while ((vehicleLine = buffReader.readLine()) != null) {
+                    String[] vehicleData = vehicleLine.split("\\|");
                     int vin = Integer.parseInt(vehicleData[0]);
                     int year = Integer.parseInt(vehicleData[1]);
                     String make = vehicleData[2];
