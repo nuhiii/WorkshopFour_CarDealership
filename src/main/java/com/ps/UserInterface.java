@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class UserInterface {
     private Dealership dealership;
+    Scanner scanner = new Scanner(System.in);
 
     public UserInterface() {
        init();
@@ -16,7 +17,6 @@ public class UserInterface {
 
     public void display() {
         init();
-        Scanner scanner = new Scanner(System.in);
         int choice;
         do {
             displayMenu();
@@ -51,34 +51,81 @@ public class UserInterface {
                 case 9:
                     processRemoveVehicleRequest();
                     break;
-                case 0:
+                case 99:
                     System.out.println("Exiting Application... Thank You!");
                     break;
                 default:
                     System.out.println("Invalid selection. Try again.");
             }
-        } while (choice != 0);
+        } while (choice != 99);
     }
 
     private void displayMenu() {
-        System.out.println("1 - Find by price");
-        System.out.println("2 - Find by make / model");
-        System.out.println("3 - Find by year");
-        System.out.println("4 - Find by color");
-        System.out.println("5 - Find by mileage");
-        System.out.println("6 - Find by type");
-        System.out.println("7 - Show ALL vehicles");
-        System.out.println("8 - Add vehicle");
-        System.out.println("9 - Remove vehicle");
-        System.out.println("0 - Quit");
+        System.out.println("1 - Find vehicles within a price range");
+        System.out.println("2 - Find vehicles by make / model");
+        System.out.println("3 - Find vehicles by year range");
+        System.out.println("4 - Find vehicles by color");
+        System.out.println("5 - Find vehicles by mileage range");
+        System.out.println("6 - Find vehicles by type (car, truck, SUV, van)");
+        System.out.println("7 - List ALL vehicles");
+        System.out.println("8 - Add a vehicle");
+        System.out.println("9 - Remove a vehicle");
+        System.out.println("99 - Quit");
     }
 
-    private void processGetByPriceRequest() {}
-    private void processGetByMakeModelRequest() {}
-    private void processGetByYearRequest() {}
-    private void processGetByColorRequest() {}
-    private void processGetByMileageRequest() {}
-    private void processGetByVehicleTypeRequest() {}
+    private void processGetByPriceRequest() {
+        System.out.print("Enter minimum price: ");
+        double minPrice = scanner.nextDouble();
+        System.out.print("Enter maximum price: ");
+        double maxPrice = scanner.nextDouble();
+        scanner.nextLine();
+
+        List<Vehicle> vehicles = dealership.getVehiclesByPrice(minPrice, maxPrice);
+        displayVehicles(vehicles);
+    }
+    private void processGetByMakeModelRequest() {
+        System.out.print("Enter make: ");
+        String make = scanner.nextLine();
+        System.out.print("Enter model: ");
+        String model = scanner.nextLine();
+
+        List<Vehicle> vehicles = dealership.getVehiclesByMakeModel(make, model);
+        displayVehicles(vehicles);
+    }
+    private void processGetByYearRequest() {
+        System.out.print("Enter minimum year: ");
+        int minYear = scanner.nextInt();
+        System.out.print("Enter maximum year: ");
+        int maxYear = scanner.nextInt();
+        scanner.nextLine();
+
+        List<Vehicle> vehicles = dealership.getVehiclesByYear(minYear, maxYear);
+        displayVehicles(vehicles);
+    }
+    private void processGetByColorRequest() {
+        System.out.print("Enter color: ");
+        String color = scanner.nextLine();
+
+        List<Vehicle> vehicles = dealership.getVehiclesByColor(color);
+        displayVehicles(vehicles);
+    }
+    private void processGetByMileageRequest() {
+        System.out.print("Enter minimum mileage: ");
+        int minMileage = scanner.nextInt();
+        System.out.print("Enter maximum mileage: ");
+        int maxMileage = scanner.nextInt();
+        scanner.nextLine(); // Consume newline
+
+        List<Vehicle> vehicles = dealership.getVehiclesByMileage(minMileage, maxMileage);
+        displayVehicles(vehicles);
+    }
+    private void processGetByVehicleTypeRequest() {
+        System.out.print("Enter vehicle type (car, truck, SUV, van): ");
+        String vehicleType = scanner.nextLine();
+
+        List<Vehicle> vehicles = dealership.getVehiclesByType(vehicleType);
+        displayVehicles(vehicles);
+    }
     private void processAllVehiclesRequest() {
         List<Vehicle> vehicles = dealership.getAllVehicles();
         displayVehicles(vehicles);
