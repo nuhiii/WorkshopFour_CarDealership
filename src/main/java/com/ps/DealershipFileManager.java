@@ -60,6 +60,7 @@ public class DealershipFileManager {
                         vehicle.getOdometer() + "|" + vehicle.getPrice());
                 buffWriter.newLine();
             }
+            buffWriter.close();
         } catch (IOException e) {
             e.printStackTrace();
         }

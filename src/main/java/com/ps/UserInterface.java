@@ -181,6 +181,9 @@ public class UserInterface {
 
         if (removeVehicle != null) {
             dealership.removeVehicle(removeVehicle);
+            DealershipFileManager dealershipFileManager = new DealershipFileManager();
+            dealershipFileManager.saveDealership(dealership, "inventory.txt");
+            System.out.println("Vehicle with VIN " + vin + " has been successfully removed.");
         } else {
             System.out.println("Vehicle with provided VIN not found.");
         }
