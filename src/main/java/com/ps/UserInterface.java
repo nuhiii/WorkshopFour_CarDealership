@@ -138,6 +138,51 @@ public class UserInterface {
                     ", Mileage: " + vehicle.getOdometer() + ", Price: $" + vehicle.getPrice());
         }
     }
-    private void processAddVehicleRequest() {}
-    private void processRemoveVehicleRequest() {}
+    private void processAddVehicleRequest() {
+        System.out.print("Enter VIN: ");
+        int vin = scanner.nextInt();
+        System.out.print("Enter year: ");
+        int year = scanner.nextInt();
+        scanner.nextLine();
+        System.out.print("Enter make: ");
+        String make = scanner.nextLine();
+        System.out.print("Enter model: ");
+        String model = scanner.nextLine();
+        System.out.print("Enter vehicle type: ");
+        String vehicleType = scanner.nextLine();
+        System.out.print("Enter color: ");
+        String color = scanner.nextLine();
+        System.out.print("Enter mileage: ");
+        int mileage = scanner.nextInt();
+        System.out.print("Enter price: ");
+        double price = scanner.nextDouble();
+        scanner.nextLine();
+
+        Vehicle vehicle = new Vehicle(vin, year, make, model, vehicleType, color, mileage, price);
+        dealership.addVehicle(vehicle);
+
+        DealershipFileManager dealershipFileManager = new DealershipFileManager();
+        dealershipFileManager.saveDealership(dealership, "inventory.txt");
+
+        System.out.println("Vehicle has been added successfully.");
+    }
+    private void processRemoveVehicleRequest() {
+        System.out.print("Enter the VIN of the vehicle you wish to remove: ");
+        int vin = scanner.nextInt();
+        scanner.nextLine();
+
+        Vehicle removeVehicle = null;
+        for (Vehicle vehicle : dealership.getAllVehicles()) {
+            if (vehicle.getVin() == vin) {
+                removeVehicle = vehicle;
+                break;
+            }
+        }
+
+        if (removeVehicle != null) {
+            dealership.removeVehicle(removeVehicle);
+        } else {
+            System.out.println("Vehicle with provided VIN not found.");
+        }
+    }
 }

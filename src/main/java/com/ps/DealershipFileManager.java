@@ -5,8 +5,6 @@ import java.io.FileReader;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 public class DealershipFileManager {
 
@@ -46,7 +44,24 @@ public class DealershipFileManager {
         return dealership;
     }
 
+    // As stated this method will overwrite the file with the current dealership info and inventory list
     public void saveDealership(Dealership dealership, String filePath) {
-    }
+        try {
+            BufferedWriter buffWriter = new BufferedWriter(new FileWriter(filePath));
+            // Write the first line with the dealership info
+            buffWriter.write(dealership.getName() + "|" + dealership.getAddress() + "|" + dealership.getPhone());
+            buffWriter.newLine();
 
+            // Write the next lines with the vehicle data
+            for (Vehicle vehicle : dealership.getAllVehicles()) {
+                buffWriter.write(vehicle.getVin() + "|" + vehicle.getYear() + "|" +
+                        vehicle.getMake() + "|" + vehicle.getModel() + "|" +
+                        vehicle.getVehicleType() + "|" + vehicle.getColor() + "|" +
+                        vehicle.getOdometer() + "|" + vehicle.getPrice());
+                buffWriter.newLine();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
