@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fb52db98-c8f9-4437-96ca-e7fd8d5c608d" name="Changes" comment="Finalize Phase 5 accomplishing adding/removing vehicle feature and saving new changes to file">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory.txt" beforeDir="false" afterPath="$PROJECT_DIR$/inventory.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ps/DealershipFileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ps/DealershipFileManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ps/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ps/UserInterface.java" afterDir="false" />
-    </list>
+    <list default="true" id="fb52db98-c8f9-4437-96ca-e7fd8d5c608d" name="Changes" comment="Fix minor bugs and errors" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -62,7 +57,7 @@
       <workItem from="1715813801948" duration="4000" />
       <workItem from="1715813807287" duration="1000" />
       <workItem from="1715813809814" duration="31000" />
-      <workItem from="1715813843346" duration="9354000" />
+      <workItem from="1715813843346" duration="9856000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <option name="closed" value="true" />
@@ -136,7 +131,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715823996143</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Fix minor bugs and errors">
+      <option name="closed" value="true" />
+      <created>1715826125767</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1715826125767</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,6 +166,7 @@
     <MESSAGE value="Work on Phase 5 and complete the process get by specific request methods to display vehicles within the user range choice" />
     <MESSAGE value="Continue working on Phase 5 by now implementing the get vehicles by given range methods so that the process by methods that were completed previously can actually display the vehicles according to the user specifications" />
     <MESSAGE value="Finalize Phase 5 accomplishing adding/removing vehicle feature and saving new changes to file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finalize Phase 5 accomplishing adding/removing vehicle feature and saving new changes to file" />
+    <MESSAGE value="Fix minor bugs and errors" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix minor bugs and errors" />
   </component>
 </project>

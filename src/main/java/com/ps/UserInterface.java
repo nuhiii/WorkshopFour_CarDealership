@@ -61,6 +61,7 @@ public class UserInterface {
     }
 
     private void displayMenu() {
+        System.out.println("Welcome To The Car Dealership!");
         System.out.println("1 - Find vehicles within a price range");
         System.out.println("2 - Find vehicles by make / model");
         System.out.println("3 - Find vehicles by year range");
